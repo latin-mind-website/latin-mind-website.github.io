@@ -1,0 +1,624 @@
+/*	COLORS */
+:root {
+	--navBlack: #272727;
+	--grayColor: #979797;
+}
+
+
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #f5f5f5;
+	padding-top: 60px; /* Space for fixed header */
+}
+
+main {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* Header Styles */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: var(--navBlack);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 70px;
+}
+
+/* Logo Styles */
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo p {
+	height: 45px;
+	font-size: 2rem;
+	color: white;
+	cursor: default;
+	width: auto;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+}
+
+.logo p:hover {
+	transform: scale(1.05);
+}
+
+/* Navigation Styles */
+.nav-menu {
+	display: flex;
+	list-style: none;
+	gap: 0;
+}
+
+.nav-item {
+	position: relative;
+}
+
+.nav-link {
+	display: block;
+	padding: 1rem 1.5rem;
+	text-decoration: none;
+	color: white;
+	font-weight: 500;
+	font-size: 1rem;
+	transition: all 0.3s ease;
+	border-radius: 8px;
+	margin: 0 0.25rem;
+}
+
+.nav-link:hover {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	transform: translateY(-2px);
+}
+
+/* Dropdown Styles */
+.dropdown {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	background: white;
+	min-width: 200px;
+	border-radius: 12px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	overflow: hidden;
+	margin-top: 0.5rem;
+}
+
+.nav-item:hover .dropdown {
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-link {
+	display: block;
+	padding: 0.75rem 1.25rem;
+	text-decoration: none;
+	color: #333;
+	font-weight: 400;
+	transition: all 0.3s ease;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-link:last-child {
+	border-bottom: none;
+}
+
+.dropdown-link:hover {
+	background: var(--navBlack);
+	color: white;
+	transform: translateX(5px);
+}
+
+/* Dropdown Arrow */
+.nav-item.has-dropdown .nav-link::after {
+	content: '▼';
+	font-size: 0.7rem;
+	margin-left: 0.5rem;
+	transition: transform 0.3s ease;
+}
+
+.nav-item.has-dropdown:hover .nav-link::after {
+	transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+/*	Footer	*/
+footer {
+	background-color: var(--navBlack);
+	color: white;
+	padding: 2em;
+}
+
+.footer-items {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: transform 0.3s ease;
+	gap: 1em;
+}
+
+footer img:hover {
+	transform: scale(1.05);
+}
+
+
+
+
+
+
+/* Hero Section Styles */
+.hero-section-home {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+                url('https://cdn-imgix.headout.com/microbrands-content-image/image/158eca01f1e0e7c94f777e5396ddcd63-AdobeStock_176106362.jpeg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content-home {
+    z-index: 2;
+    position: relative;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+.hero-section-exams {
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+                url('https://www.ancientsociety.com/wp-content/uploads/Roman-Colosseum-01.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content-exams {
+    z-index: 2;
+    position: relative;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-section-resources {
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+                url('https://img.freepik.com/premium-photo/ancient-roman-aqueducts-testament-roman-engineering_891336-26114.jpg?w=2000') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content-resources {
+    z-index: 2;
+    position: relative;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-section-mythology {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+                url('https://roman.mythologyworldwide.com/wp-content/uploads/2025/02/roman.mythologyworldwide.com-The-Mysteries-of-Nature-Discovering-the-Roman-Gods-Behind-the-Elements.webp') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content-mythology {
+    z-index: 2;
+    position: relative;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-section-games {
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+                url('https://i.pinimg.com/originals/97/28/4c/97284cbd5e0b4bf7c9f49010109f3e68.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content-games {
+    z-index: 2;
+    position: relative;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-section-about {
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+                url('https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/Greek-mythology-gettyImages-1220052224?_a=BAVAZGID0') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content-about {
+    z-index: 2;
+    position: relative;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+
+
+
+
+
+
+
+
+/* Fade Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial hidden state */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+/* Visible state when in view */
+.scroll-animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional: Different animation styles */
+.fade-left {
+    transform: translateX(-50px);
+}
+
+.fade-left.in-view {
+    transform: translateX(0);
+}
+
+.scale-in {
+    transform: scale(0.8);
+}
+
+.scale-in.in-view {
+    transform: scale(1);
+}
+
+
+
+
+
+/* Parallax Effect for Hero Background */
+.hero-section-home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 1;
+}
+
+
+
+
+
+/*	Homepage Styles	*/
+
+#home-intro {
+	margin: 10em 3em;
+	animation: fadeInUp 1.5s ease-out;
+}
+
+#home-intro img {
+	width: 300px;
+}
+
+#home-intro div:nth-child(1) {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-content: center;
+	gap: 3em;
+	margin-bottom: 10em;
+}
+
+#home-intro div:nth-child(1) p {
+	font-size: 2rem;
+	font-weight: lighter;
+	margin-bottom: 1em;
+}
+
+#home-intro div:nth-child(2) {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	gap: 3em;
+	font-size: 1.25rem;
+	font-weight: lighter;
+}
+
+#home-intro div:nth-child(2) li {
+	margin: .5em 2em;
+}
+
+.stack-items-flexbox {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+
+
+
+
+/*	Main Section 2	*/
+
+
+.main-section-2 {
+	background: var(--grayColor);
+	padding: 3em;
+}
+
+
+
+/*	Repeated Styles		*/
+
+.page-intro {
+	margin: 5em 3em;
+}
+
+.page-intro h2 {
+	font-size: 3rem;
+	margin-bottom: .75em;
+}
+
+.page-intro p {
+	font-size: 1.25rem;
+	font-weight: lighter;
+	margin: .75em;
+}
+
+.page-intro li {
+	font-size: 1.25rem;
+	font-weight: lighter;
+	margin: .5em 3em;
+}
+
+
+
+.content-grid-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1em 2em;
+	margin: 3em;
+	max-width: 900px;
+}
+
+.content-grid-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.content-grid-item img {
+	max-width: 150px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-grid-item img:hover {
+	transform: scale(1.05);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.content-grid-item-subtitle {
+	font-size: 1.25rem;
+	font-weight: lighter;
+}
+
+
+#history-intro {
+	margin: 10em 3em;
+	animation: fadeInUp 1.5s ease-out;
+}
+
+#history-intro img {
+	width: 150px;
+}
+
+#history-intro div:nth-child(1) {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-content: center;
+	gap: 3em;
+	margin-bottom: 10em;
+}
+
+#history-intro div:nth-child(1) p {
+	font-size: 2rem;
+	font-weight: lighter;
+	margin-bottom: 1em;
+}
+
+
+
+
+.resources-introduction {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	align-items: center;
+	gap: 1em 2em;
+	margin: 3em;
+	max-width: 900px;
+}
+
+.resources-introduction h3 {
+	margin-bottom: 1.5em;
+}
+
+
+
+
+
+
+
+/*	Button Styles	*/
+.btn-primary {
+	padding: 1rem 2rem;
+	background: var(--navBlack);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+	text-decoration: none;
+	display: inline-block;
+	margin: 2em;
+}
+
+.btn-primary:hover {
+	background: rgba(39, 39, 39, 0.9);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:active {
+	transform: translateY(0);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+	.logo p {
+		font-size: 1.25rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.header-container {
+		padding: 0 1rem;
+	}
+
+	.nav-menu {
+		gap: 0;
+	}
+
+	.nav-link {
+		padding: 1rem;
+		font-size: 0.9rem;
+	}
+
+	.dropdown {
+		min-width: 180px;
+	}
+	
+	
+	
+	.resources-introduction {
+		flex-direction: column;
+	}
+	
+	
+	
+	
+}

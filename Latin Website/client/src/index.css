@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(224, 71%, 4%);
+  --primary: hsl(239, 84%, 67%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(160, 84%, 39%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(43, 96%, 56%);
+  --accent-foreground: hsl(25, 9%, 10%);
+  --border: hsl(220, 13%, 91%);
+  --radius: 0.75rem;
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+/* Flashcard animations */
+.flashcard-container {
+  perspective: 1000px;
+}
+.flashcard-flip {
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+.flashcard-flip.flipped {
+  transform: rotateY(180deg);
+}
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1.5rem;
+}
+.flashcard-back {
+  transform: rotateY(180deg);
+}
+/* Gradient backgrounds */
+.hero-gradient {
+  background: linear-gradient(135deg, hsl(239, 84%, 67%) 0%, hsl(239, 84%, 47%) 100%);
+}
+.mode-learn {
+  background: linear-gradient(135deg, hsl(270, 70%, 50%) 0%, hsl(270, 70%, 40%) 100%);
+}
+/* Chat widget */
+.chat-widget {
+  animation: slideIn 0.3s ease-out;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Loading spinner */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* Learn mode animations */
+.learn-result-correct {
+  animation: correctBounce 0.4s ease-out;
+}
+.learn-result-incorrect {
+  animation: incorrectShake 0.4s ease-out;
+}
+@keyframes correctBounce {
+  0%, 20%, 60%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  80% { transform: translateY(-5px); }
+}
+@keyframes incorrectShake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}

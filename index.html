@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I'm  Rayhan and I can help you crush the National Latin Exams!">
+	<link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <title>Pass the NLE with me!</title>
+</head>
+<body>
+    <header>
+	        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <p>Rayhan Roswendi</p>
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Exams</a>
+                        <div class="dropdown">
+                            <a href="exams/nleintro.html" class="dropdown-link">NLE Intro</a>
+                            <a href="exams/nlei.html" class="dropdown-link">NLE I</a>
+                            <a href="exams/nleii.html" class="dropdown-link">NLE II</a>
+                            <a href="exams/nleiii.html" class="dropdown-link">NLE III</a>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Resources</a>
+                        <div class="dropdown">
+                            <a href="resources/cultureandcivilization.html" class="dropdown-link">Culture & Civilization</a>
+                            <a href="resources/grammar.html" class="dropdown-link">Grammar</a>
+                            <a href="resources/history.html" class="dropdown-link">History</a>
+                            <a href="resources/mythology.html" class="dropdown-link">Mythology</a>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="games/games.html" class="nav-link">Games</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    
+<!-- Hero Section -->
+    <section class="hero-section-home">
+        <div class="hero-content-home">
+            <h1 class="hero-title">Pass the <br/>National Latin Exams!</h1>
+            <p class="hero-subtitle">Join the top 5% of Latin learners</p>
+        </div>
+    </section>
+	
+	<main>
+		<section id="home-intro" class="scroll-animate">
+			<div>
+				<div>
+					<p>I passed the NLE exams with gold medals<br/><br/>
+					<strong><em>And you can too!</em></strong></p>
+				</div>
+				<img src="images/AllMedals.jpg" alt="All of my NLE medals" />
+			</div>	
+					
+					
+					
+			<div>
+				<img src="images/NLEExams.png" alt="Levels 1-3 NLE exams" />
+				<div class="stack-items-flexbox">
+					<p>Find <strong><em>all the info</em></strong> you need to earn gold on the NLE exams</p>
+					<ul>
+						<li>Take practice exams (with correct answers) </li>
+						<li>Read up on all the right info</li>
+						<li>Study with fun games and puzzles</li>
+					</ul>
+				</div>
+			</div>
+			
+			
+		</section>
+    </main>
+    
+    <footer>
+		<div class="footer-items">
+			<p>&copy; 2025 Rayhan Roswendi, Parents Again, All Rights Reserved</p>
+			<div>
+				<a href="" target="_blank"><img src="images/Facebook.png" alt="Facebook logo" /></a>
+				<a href="" target="_blank"><img src="images/Instagram.png" alt="Instagram logo" /></a>
+				<a href="" target="_blank"><img src="images/Twitter.png" alt="Twitter logo" /></a>
+			</div>
+		</div>
+    </footer>
+	
+	<script>
+	// Create observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+        }
+    });
+});
+
+// Observe elements
+document.querySelectorAll('.scroll-animate').forEach(el => {
+    observer.observe(el);
+});
+	</script>
+    
+</body>
+</html>

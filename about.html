@@ -1,0 +1,154 @@
+<!--About
+- Inserting the Latin or Mythology related image 
+- Inserting Golf Image
+- Insert Python/Java 
+- Insert Basketball Image 
+-->
+
+<!--Latin Games
+- Add in the puzzles from Google sites
+- Change the description under “Learn the fun way”
+- Fix the images below, the Facebook, instagram, and twitter
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I'm  Rayhan! I passed the NLEs with flying colors! Here's my story.">
+	<link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <title>Who am I?</title>
+</head>
+<body>
+    <header>
+	        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <p>Rayhan Roswendi</p>
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Exams</a>
+                        <div class="dropdown">
+                            <a href="exams/nleintro.html" class="dropdown-link">NLE Intro</a>
+                            <a href="exams/nlei.html" class="dropdown-link">NLE I</a>
+                            <a href="exams/nleii.html" class="dropdown-link">NLE II</a>
+                            <a href="exams/nleiii.html" class="dropdown-link">NLE III</a>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Resources</a>
+                        <div class="dropdown">
+                            <a href="resources/cultureandcivilization.html" class="dropdown-link">Culture & Civilization</a>
+                            <a href="resources/grammar.html" class="dropdown-link">Grammar</a>
+                            <a href="resources/history.html" class="dropdown-link">History</a>
+                            <a href="resources/mythology.html" class="dropdown-link">Mythology</a>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="games/games.html" class="nav-link">Games</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    
+<!-- Hero Section -->
+    <section class="hero-section-about">
+        <div class="hero-content-about">
+            <h1 class="hero-title">About Me</h1>
+            <p class="hero-subtitle">Let me introduce myself</p>
+        </div>
+    </section>
+	
+	<main>
+		<section class="resources-introduction" class="scroll-animate">
+				<h2>Hi, I'm  Rayhan</h2>
+				<img src="images/RayhanPhoto1.jpg" alt="Rayhan photo" style="max-width: 250px;"/>	
+		</section>
+			
+			<section class="resources-introduction" class="scroll-animate">
+				<img src="images/latinmyth.jpeg" alt="INSERT LATIN OR MYTHOLOGY RELATED IMAGE" />
+				<p>
+					<span style="font-weight: bold">Rayhan Roswendi</span> is a curious mind and a passionate learner with a love for both the ancient and the modern. Rayhan is captivated by Latin, drawn not only to its language but to the mythological stories it holds—tales that have fascinated him since he was young. His interest in mythology fuels his enthusiasm for Latin, making it a rich and meaningful pursuit.
+				</p>
+			</section>
+			
+			<section class="resources-introduction" class="scroll-animate">
+				<p>
+					Beyond the classics, Rayhan has spent the past two years as a dedicated member of the <span style="font-weight: bold">golf team</span>. While he plays golf recreationally, he thrives on the camaraderie of the team and the challenge of perfecting his swing.
+				</p>
+				<img src="images/golf.jpeg" alt="INSERT GOLF IMAGE" />
+			</section>
+			
+			<section class="resources-introduction" class="scroll-animate">
+				<img src="images/pythonjava.jpeg" alt="INSERT PYTHON/JAVA RELATED IMAGE, MAYBE SOMETHING MIXED WITH PIANO" />
+				<p>
+					Rayhan’s intellectual curiosity extends to coding, where he’s been immersing himself in <span style="font-weight: bold">Python and Java</span>. He is intrigued by their inherent capabilities and the intricate connections they allow him to create. This appreciation for complexity mirrors his artistic side: for over five years, Rayhan has played the <span style="font-weight: bold">piano</span>, using music as a powerful way to express his emotions. While he might not have composed the music he plays, the ability to bring beautiful melodies to life brings him immense joy and a sense of accomplishment.
+				</p>
+			</section>
+			
+			<section class="resources-introduction" class="scroll-animate">
+				<p>
+					In his free time, Rayhan enjoys the energy and competition of <span style="font-weight: bold">basketball</span> with his friends, as well as unwinding with video games like Minecraft. And when the day is done, he delights in the simple pleasure of sleeping—resting his active mind and recharging for whatever adventure comes next.
+				</p>
+                <img src="images/basketball.jpeg" alt="INSERT BASKETBALL IMAGE" />
+			</section>
+					
+    
+        <a href="https://docs.google.com/document/d/1xiaHMhHbIYkhIgvEUH5vBABIoJZGA6oU/edit?tab=t.0" target="_blank" class="btn-primary">
+            Resume
+        </a>
+    
+
+    
+      
+	
+	
+    </main>
+    
+    <footer>
+		<div class="footer-items">
+			<p>&copy; 2025 Rayhan Roswendi, Parents Again, All Rights Reserved</p>
+			<div>
+				<a href="" target="_blank"><img src="images/Facebook.png" alt="Facebook logo" /></a>
+				<a href="" target="_blank"><img src="images/Instagram.png" alt="Instagram logo" /></a>
+				<a href="" target="_blank"><img src="images/Twitter.png" alt="Twitter logo" /></a>
+			</div>
+		</div>
+    </footer>
+	
+	<script>
+	// Create observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+        }
+    });
+});
+
+// Observe elements
+document.querySelectorAll('.scroll-animate').forEach(el => {
+    observer.observe(el);
+});
+	</script>
+    
+</body>
+</html>
